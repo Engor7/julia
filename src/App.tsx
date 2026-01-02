@@ -19,7 +19,12 @@ const App = () => {
 
   const [active, setActive] = useState<number | null>(null)
 
-  const UserImte = ({ user, index }) => (
+  type UserImteProps = {
+    user: User
+    index: number
+  }
+
+  const UserImte = ({ user, index }: UserImteProps) => (
     <li
       onClick={() => {
         setActive(index)
